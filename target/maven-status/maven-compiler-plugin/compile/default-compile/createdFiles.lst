@@ -1,2 +1,4 @@
+com\jadonvb\plugin\Main.class
 velocity-plugin.json
-com\jadonvb\Main.class
+com\jadonvb\plugin\MessageHandler.class
+com\jadonvb\plugin\MessageHandler$1.class
