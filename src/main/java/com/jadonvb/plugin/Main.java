@@ -61,7 +61,7 @@ public class Main {
     }
 
     public void registerServer(String name, int port) {
-        ServerInfo serverInfo = new ServerInfo(name, InetSocketAddress.createUnresolved("192.168.2.118", port));
+        ServerInfo serverInfo = new ServerInfo(name, InetSocketAddress.createUnresolved(name, port));
         proxyServer.registerServer(serverInfo);
     }
 

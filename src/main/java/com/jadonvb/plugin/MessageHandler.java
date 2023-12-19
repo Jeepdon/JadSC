@@ -2,6 +2,7 @@ package com.jadonvb.plugin;
 
 import com.jadonvb.Message;
 import com.jadonvb.MessageListener;
+import com.jadonvb.MessageTypes;
 import com.jadonvb.plugin.Main;
 
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ public class MessageHandler implements MessageListener {
 
                 Message returnMessage = new Message();
                 returnMessage.setSender("velocity");
+                returnMessage.setType(MessageTypes.PORT_REQUEST);
                 returnMessage.setReceiver(message.getSender());
                 ArrayList<String> arguments = new ArrayList<>();
 
@@ -34,6 +36,8 @@ public class MessageHandler implements MessageListener {
                 returnMessage.setArguments(arguments);
 
                 main.getClient().sendMessage(returnMessage);
+
+
 
                 main.registerServer(message.getSender(),port);
             }
